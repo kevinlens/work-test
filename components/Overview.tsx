@@ -13,7 +13,7 @@ import {
 
 let data = [];
 
-const CustomTooltip = ({ active, payload }) => {
+const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className='custom-tooltip bg-[#121418] p-2'>
@@ -30,16 +30,16 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-const Overview = ({ users }) => {
+const Overview = ({ users }:any) => {
   const [selectedUser, setSelectedUser] = useState(users[0]);
 
-  const handleUserChange = (event) => {
+  const handleUserChange = (event: { target: { value: any; }; }) => {
     const selectedUserId = event.target.value;
-    const selectedUser = users.find((user) => user.id === selectedUserId);
+    const selectedUser = users.find((user: any) => user.id === selectedUserId);
     setSelectedUser(selectedUser);
   };
 
-  data = selectedUser.loss.map((loss, i) => {
+  data = selectedUser.loss.map((loss: any, i: string | number) => {
     return { name: i, loss: loss, profit: selectedUser.profit[i] };
   });
 
@@ -76,7 +76,7 @@ const Overview = ({ users }) => {
               borderRadius: '5px',
             }}
           >
-            {users.map((user) => (
+            {users.map((user: any) => (
               <option key={user.id} value={user.id}>
                 {user.fullName}
               </option>
