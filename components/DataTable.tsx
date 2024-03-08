@@ -262,7 +262,7 @@ const DataTable = ({ users }: any) => {
   };
 
   // Filter rows based on search query
-  const filteredRows = rows.filter((row) =>
+  const filteredRows = rows.filter((row: { name: string; }) =>
     row.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
