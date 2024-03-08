@@ -215,7 +215,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
-const DataTable = ({ users }) => {
+const DataTable = ({ users }: any) => {
   const [rowsPerPage2, setRowsPerPage2] = React.useState(5); // Set 10 as the default value
 
   let rows = [];
