@@ -242,7 +242,7 @@ const DataTable = ({ users }: any) => {
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.id);
+      const newSelected = rows.map((n: { id: any; }) => n.id);
       setSelected(newSelected);
       return;
     }
@@ -403,7 +403,7 @@ const DataTable = ({ users }: any) => {
             count={rowsPerPage2} // This should be replaced with the total count of your data
             rowsPerPage={rowsPerPage2}
             page={page}
-            onPageChange={handleChangeRowsPerPage}
+            onPageChange={()=>handleChangeRowsPerPage}
             onRowsPerPageChange={handleChangeRowsPerPage}
             labelRowsPerPage='Show'
           />
