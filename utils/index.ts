@@ -8,7 +8,7 @@ export async function fetchUsers() {
     let loss = user.loss.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
     let profit = user.profit.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
     let balance = loss + profit;
-    let name = `${user.name} ${user.lastname}`
+    let name = `${user.name} ${user.lastName}`
     return {
       id: user.id,
       fullName: name,
@@ -31,7 +31,7 @@ export async function fetchUsers2() {
     let loss = user.loss.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
     let profit = user.profit.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
     let balance = loss + profit;
-    let name = `${user.name} ${user.lastame}`
+    let name = `${user.name} ${user.lastname}`
     return {
       id: user.id,
       fullName: name,

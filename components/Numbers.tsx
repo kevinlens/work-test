@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Numbers = ({ title, numbers }: any) => {
+const Numbers = ({ title, numbers }) => {
   return (
     <div className='bg-[#091f2f] mb-2 py-2 pl-2 pr-32'>
       <h1>{title}</h1>

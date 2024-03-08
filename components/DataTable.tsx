@@ -215,11 +215,11 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
     </Toolbar>
   );
 }
-const DataTable = ({ users }: any) => {
+const DataTable = ({ users }) => {
   const [rowsPerPage2, setRowsPerPage2] = React.useState(5); // Set 10 as the default value
-
-  let rows: any = [];
-  users.forEach((user: any, index: number) => {
+ 
+  let rows = [];
+  users.forEach((user, index) => {
     const { id, fullName, profit, loss, balance } = user;
     rows.push(createData(index + 1, fullName, profit, loss, balance));
   });
@@ -242,7 +242,7 @@ const DataTable = ({ users }: any) => {
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n: { id: any; }) => n.id);
+      const newSelected = rows.map((n) => n.id);
       setSelected(newSelected);
       return;
     }
@@ -262,7 +262,7 @@ const DataTable = ({ users }: any) => {
   };
 
   // Filter rows based on search query
-  const filteredRows = rows.filter((row: { name: string; }) =>
+  const filteredRows = rows.filter((row) =>
     row.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -403,7 +403,7 @@ const DataTable = ({ users }: any) => {
             count={rowsPerPage2} // This should be replaced with the total count of your data
             rowsPerPage={rowsPerPage2}
             page={page}
-            onPageChange={()=>handleChangeRowsPerPage}
+            onPageChange={handleChangeRowsPerPage}
             onRowsPerPageChange={handleChangeRowsPerPage}
             labelRowsPerPage='Show'
           />
