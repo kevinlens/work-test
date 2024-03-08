@@ -1,0 +1,51 @@
+export const nodes = [
+  {
+    id: '0',
+    name: 'Operating System',
+    deadline: '2020-02-15T05:00:00.000Z',
+    type: 'SETUP',
+    isComplete: true,
+  },
+  {
+    id: '1',
+    name: 'VSCode',
+    deadline: '2020-02-17T05:00:00.000Z',
+    type: 'SETUP',
+    isComplete: true,
+  },
+  {
+    id: '2',
+    name: 'JavaScript',
+    deadline: '2020-03-28T04:00:00.000Z',
+    type: 'LEARN',
+    isComplete: true,
+  },
+  {
+    id: '3',
+    name: 'React',
+    deadline: '2020-04-08T04:00:00.000Z',
+    type: 'LEARN',
+    isComplete: false,
+  },
+  {
+    id: '4',
+    name: 'Git',
+    deadline: '2020-05-28T04:00:00.000Z',
+    type: 'SETUP',
+    isComplete: false,
+  },
+  {
+    id: '5',
+    name: 'Node',
+    deadline: '2020-06-18T04:00:00.000Z',
+    type: 'LEARN',
+    isComplete: true,
+  },
+  {
+    id: '6',
+    name: 'GraphQL',
+    deadline: '2020-07-30T04:00:00.000Z',
+    type: 'LEARN',
+    isComplete: false,
+  },
+];
