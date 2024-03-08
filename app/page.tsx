@@ -1,4 +1,4 @@
-
+export const runtime = "edge"
 import {  Overview } from '@/components';
 import DataTable from '@/components/DataTable';
 import { fetchUsers, fetchUsers2 } from '@/utils';
