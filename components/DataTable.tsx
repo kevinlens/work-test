@@ -218,7 +218,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
 const DataTable = ({ users }: any) => {
   const [rowsPerPage2, setRowsPerPage2] = React.useState(5); // Set 10 as the default value
 
-  let rows = [];
+  let rows: any = [];
   users.forEach((user, index) => {
     const { id, fullName, profit, loss, balance } = user;
     rows.push(createData(index + 1, fullName, profit, loss, balance));
