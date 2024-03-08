@@ -27,11 +27,11 @@ export async function fetchUsers2() {
   const result = await response.json();
 
   let updatedUser: User[] = result.map((user: any) => {
-    let lossArrayPositives = user.loss.map(num => Math.abs(num));
+    let lossArrayPositives = user.loss.map((num: number) => Math.abs(num));
     let loss = user.loss.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
     let profit = user.profit.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
     let balance = loss + profit;
-    let name = `${user.name} ${user.lastname}`
+    let name = `${user.name} ${user.lastame}`
     return {
       id: user.id,
       fullName: name,
